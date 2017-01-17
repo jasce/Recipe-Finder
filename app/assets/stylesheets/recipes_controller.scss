@@ -1,0 +1,32 @@
+// Place all the styles related to the RecipesController controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+form input{
+	padding: 8px 10px;
+	display:-webkit-inline-box;
+	min-width: 300px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	&:focus{
+	border-color: #999;
+	outline:none;
+	}
+
+}
+form button{
+	text-decoration: none;
+	background:none;
+	border: 1.5px solid #FF6600;
+	color: #ff6600;
+	padding: 8px 25px;
+	margin-left: 25px;
+	border-radius:25px;
+	&:hover{
+	background-color: #ff6600;
+	color:#fff;
+	}
+}
+form div{
+	
+}

@@ -1,0 +1,47 @@
+<!--<h1>RecipesController#index</h1>
+<p>Find me in app/views/recipes_controller/index.html.erb</p>-->
+
+<p style="padding: 10px;"></p>
+<div class="container">
+
+<h1 style="text-align: center;">Find your favourite recipe from over 200000 recipes</h1>
+<p style="padding: 10px;"></p>
+	 <form style="text-align: center;">
+		<div>
+		<input type="text" name="search" placeholder="Enter Keyword for a Recipe">
+		<button type="submit" >Search</button>
+		</div>
+		
+
+	</form>
+	<p style="padding: 10px;"></p>
+		<h3 style="text-align: center;">Your results for - <%= @search_term %></h3>
+		<p style="padding: 10px;"></p>
+	
+
+		<% @recipes.in_groups_of(4, false) do |recipe| %>
+		<div class="row">
+		<% recipe.each do |r| %>	
+		<div class="col-md-3"> 
+				
+				 <%= image_tag(r["image_url"], class: 'img-responsive')%>
+				<p ></p>
+				<div>
+					<a href= "<%= r["source_url"]%>", target="_blank", style="font-size: 105%;"><%= raw r["title"] %></a> <br> 
+					<p style="font-size: 13px; margin-top: 7px;">User Ratings: <%= r["social_rank"] %></p>
+				</div>
+			
+		</div>
+		<% end %>
+ 		</div>
+ 		<br><br>
+		<% end%>
+
+
+
+
+
+
+
+	</div>
+
